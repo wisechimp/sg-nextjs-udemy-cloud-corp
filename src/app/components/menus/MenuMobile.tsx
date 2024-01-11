@@ -3,11 +3,14 @@ import menudata from "@/app/data/menu"
 import Hamburger from "hamburger-react"
 import Link from "next/link"
 import { useRef, useState } from "react"
+import { useClickAway } from "react-use"
 
 const MenuMobile = () => {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
   
+  useClickAway(dropdownRef, () => setIsOpen(false))
+
   return (
     <div className="flex items-center justify-between md:hidden bg-primaryContrast">
       <Link className="pl-4 text-primaryLight" href="/">Home</Link>
