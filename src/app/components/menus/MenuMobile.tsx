@@ -17,7 +17,7 @@ const MenuMobile = () => {
       <div ref={dropdownRef}>
         <Hamburger toggled={isOpen} size={20} color="#ffffff" toggle={setIsOpen} />
         {isOpen && (
-          <div className='fixed left-0 shadow-4xl right-0 p-5 pt-0 bg-primaryDark'>
+          <nav className='fixed left-0 shadow-4xl right-0 p-5 pt-0 bg-primaryDark z-10'>
             <ul className="p-1">
               {menudata.map((page, i) => {
                 const { title, link } = page
@@ -39,7 +39,7 @@ const MenuMobile = () => {
                 )
               })}
             </ul>
-          </div>
+          </nav>
         )}
       </div>
     </div>
