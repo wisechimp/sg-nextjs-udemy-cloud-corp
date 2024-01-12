@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 h1 {
+  color: white;
   font-size: larger;
   font-weight: bold;
-  padding: 1em
+  padding: 1em;
 }
